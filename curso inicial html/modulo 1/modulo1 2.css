@@ -1,72 +1,498 @@
-h1{/*mi primer comentario en css*/ color: rgb(0, 0, 90);
-font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-font-size: 50px;
-text-transform: uppercase;
-background-color: rgba(151, 140, 255, 0.678);
-text-align: center;
+body {
+    background-color: #f4f4f4; /* A slightly softer white background */
+    color: #333; /* Darker grey text for better readability */
+    font-family: sans-serif;
+    margin: 0;
+    padding-bottom: 80px;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
-h2{font-family: Arial, Helvetica, sans-serif; color: blue;text-transform: uppercase;
-background-color: rgba(151, 140, 255, 0.678);}
-.destacado{font-weight: bold; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 18px ; color: rgb(146, 0, 146);}
 
-.prefijo{display: flex;
-    font-family: 'Arial Narrow', Arial, sans-serif; 
-    font-size: 18px; color: rgba(0, 0, 0, 0.782);
+h1 {
+    color: #ffffff; /* White text for the title in light mode */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 50px;
+    text-transform: uppercase;
+    background-color: #6a5acd; /* A pleasant purple background for the title */
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 0;
+    transition: color 0.5s ease, background-color 0.5s ease;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #483d8b; /* A slightly darker purple for h2 */
+    text-transform: uppercase;
+    background-color: #d8bfd8; /* A soft lavender background for h2 */
+    padding: 10px 0;
+    margin-top: 20px;
+    transition: color 0.5s ease, background-color 0.5s ease;
+}
+
+h3 {
+    color: #555; /* Dark grey color for h3 */
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 15px;
+    transition: color 0.5s ease;
+}
+
+p {
+    color: #333; /* Inherits from body, but defined explicitly for clarity */
+    line-height: 1.6;
+    margin-bottom: 15px;
+    transition: color 0.5s ease;
+}
+
+a {
+    color: #4169e1; /* A standard blue for links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.destacado {
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    color: #8a2be2; /* A vibrant purple for highlighted text */
+    transition: color 0.5s ease;
+}
+
+.prefijo {
+    display: flex;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    color: #333; /* Dark grey color for text within prefijo */
     font-weight: bold;
     width: 300px;
-    height: 200px;
     text-align: center;
-    background-color: rgb(151, 140, 255, 0.678);padding:30px; 
-    border: 5px outset #4228df;
+    background-color: #e6e6fa; /* Light lavender background */
+    padding: 30px;
+    border: 5px outset #b0c4de; /* Lighter border */
     box-sizing: border-box;
-    margin-left: 150px;
-    box-shadow: 5px 8px 16px -1px rgba(0,0,0,1);
-    border-radius: 55px 55px 55px 55px;
+    margin: 20px auto;
+    box-shadow: 5px 8px 16px -1px rgba(0, 0, 0, 0.2); /* Softer shadow */
+    border-radius: 55px;
     flex-flow: column nowrap;
     align-items: stretch;
-    }
-
-.divs2{border: 2px solid #000000;
-    background-color: rgb(255, 255, 255);
-    border-radius: 55px 55px 55px 55px;
-    }
-#infopag{position: fixed;
-        bottom:0px;
-        background-color: #CCCCCC;
-        height:60px;
-        width: 100%;
-    
+    justify-content: space-around;
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
 }
-.causas{
-    font-family: 'Arial Narrow', Arial, sans-serif; 
-    font-size: 18px; color: rgba(0, 0, 0, 0.782);
+
+.prefijo .divs2 {
+    margin: 5px 0;
+}
+
+.divs2 {
+    border: 2px solid #a9a9a9; /* Dark grey border */
+    background-color: #ffffff; /* White background for inner divs */
+    color: #333; /* Dark grey text for inner divs */
+    border-radius: 55px;
+    padding: 10px;
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+}
+
+#infopag {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #ddd; /* A light grey background */
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    z-index: 1000;
+    color: #333; /* Default text color for infopag */
+}
+
+#infopag > div {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+#infopag > div:last-child {
+    margin-right: 0;
+}
+
+#infopag a {
+    color: #555; /* Slightly darker grey links in the footer */
+    margin: 0 5px;
+}
+
+#logo1 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.causas {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    color: #333; /* Dark grey color for text within causas */
     font-weight: bold;
     width: 300px;
-    height: 200px;
     text-align: center;
-    background-color: rgb(151, 140, 255, 0.678);padding:30px; 
-    border: 5px outset #4228df;
+    background-color: #e6e6fa; /* Light lavender background */
+    padding: 30px;
+    border: 5px outset #b0c4de; /* Lighter border */
     box-sizing: border-box;
-    margin-left: 150px;
-    box-shadow: 5px 8px 16px -1px rgba(0,0,0,1);
-    border-radius: 55px 55px 55px 55px;}
-#form1{display: flex;
+    margin: 20px auto;
+    box-shadow: 5px 8px 16px -1px rgba(0, 0, 0, 0.2); /* Softer shadow */
+    border-radius: 55px;
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.causas li {
+    margin: 5px 0;
+    list-style: none;
+}
+
+#form1 {
+    display: flex;
     flex-flow: column nowrap;
     align-items: start;
     justify-content: center;
-    margin-bottom: 80px;
+    margin: 40px auto 80px auto;
+    max-width: 500px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: color 0.5s ease, border-color 0.5s ease;
+    color: #333; /* Default text color for the form */
 }
-.checkbox{
-    display: flex;
-    flex-flow: row nowrap;
-    margin-bottom: 10px;
-}
-#contactanos{font-family: Arial, Helvetica,   sans-serif; color: blue;text-transform: uppercase;
-    background-color: rgba(151, 140, 255, 0.678);
-    font-size: medium;
-}
-.textarea1{display: flex;
-    margin-bottom: 10px;}
-#logo1{display: flex;
-justify-content: end;}
 
+.textarea1 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.textarea1 label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    transition: color 0.5s ease;
+}
+
+.textarea1 input[type="text"],
+.textarea1 input[type="email"],
+.textarea1 input[type="tel"],
+#mensaje {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+    background-color: #fff; /* White background for inputs */
+    color: #333; /* Dark text for inputs */
+}
+
+#mensaje1 {
+     display: flex;
+     flex-direction: column;
+     margin-bottom: 15px;
+     width: 100%;
+}
+
+#mensaje1 label {
+     margin-bottom: 5px;
+     font-weight: bold;
+     transition: color 0.5s ease;
+}
+
+#output {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #555; /* Dark grey for character count */
+    transition: color 0.5s ease;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    transition: color 0.5s ease;
+}
+
+.checkbox label { /* Style the label next to the checkbox/radio */
+    margin-left: 5px; /* Space between input and label */
+    color: #333; /* Dark grey for checkbox/radio labels */
+    transition: color 0.5s ease;
+}
+
+
+#contactanos {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #483d8b; /* Same as h2 color */
+    text-transform: uppercase;
+    background-color: #d8bfd8; /* Same as h2 background */
+    font-size: medium;
+    padding: 10px 0;
+    margin-top: 30px;
+    transition: color 0.5s ease, background-color 0.5s ease;
+}
+
+
+.csqpelado {
+    margin: 40px auto; /* Center the block */
+    max-width: 500px; /* Limit width */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9; /* Light background */
+    transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease;
+    color: #333; /* Default text color */
+}
+
+.csqpelado h2 {
+    text-align: center;
+    margin-top: 0;
+    /* Inherits other h2 styles but can be overridden if needed here */
+}
+
+.csqpelado > div { /* Style for direct child divs (input groups, result) */
+    margin-bottom: 15px;
+}
+
+.csqpelado label {
+    display: block; /* Make labels block for better layout */
+    margin-bottom: 5px;
+    font-weight: bold;
+    /* Inherits other label styles */
+}
+
+/* --- MODIFIED RULE --- */
+/* Apply styles to both number and text input types */
+.csqpelado input[type="number"],
+.csqpelado input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%; /* Full width */
+    box-sizing: border-box;
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+    background-color: #fff; /* White background for input */
+    color: #333; /* Dark text for input */
+}
+/* --- END MODIFIED RULE --- */
+
+
+.csqpelado button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1em;
+    background-color: #ffc107; /* Yellow button */
+    color: #333; /* Dark text for button */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.csqpelado button:hover {
+    background-color: #ffa000; /* Darker yellow on hover */
+}
+
+.csqpelado .textresultado {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee; /* Separator line */
+    text-align: center;
+    transition: border-color 0.5s ease;
+}
+
+.csqpelado .textresultado p {
+    margin-bottom: 10px;
+    /* Inherits other p styles */
+}
+
+#resultado {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #d32f2f; /* Reddish color for the result */
+    min-height: 1.5em; /* Reserve space */
+    transition: color 0.5s ease;
+}
+
+
+/* --- Dark Mode Styles for Hair Loss Calculator (Add inside body.dark-mode) --- */
+body.dark-mode .csqpelado {
+    background-color: #3a3a3a;
+    border-color: #555;
+    color: #e0e0e0;
+}
+
+body.dark-mode .csqpelado h2 {
+    color: #a0a0ff; /* Adjust heading color */
+}
+
+body.dark-mode .csqpelado p {
+    color: #e0e0e0;
+}
+
+body.dark-mode .csqpelado label {
+     color: #e0e0e0;
+}
+
+/* --- MODIFIED DARK MODE RULE --- */
+/* Apply dark mode styles to both number and text input types */
+body.dark-mode .csqpelado input[type="number"],
+body.dark-mode .csqpelado input[type="text"] {
+    background-color: #555;
+    color: #e0e0e0;
+    border-color: #777;
+}
+/* --- END MODIFIED DARK MODE RULE --- */
+
+body.dark-mode .csqpelado button {
+    background-color: #fbc02d; /* Darker yellow */
+    color: #333;
+}
+
+body.dark-mode .csqpelado button:hover {
+    background-color: #f9a825;
+}
+
+body.dark-mode .csqpelado .textresultado {
+    border-top-color: #555;
+}
+
+body.dark-mode #resultado {
+    color: #ef9a9a; /* Lighter reddish color in dark mode */
+}
+
+/* Ensure placeholder color in dark mode */
+body.dark-mode .csqpelado input::placeholder {
+    color: #ccc;
+    opacity: 1;
+}
+
+
+/* Styles for the dark mode button */
+.modooscuro {
+    background: #333; /* Dark grey background */
+    color: #f0f0f0; /* Light text */
+    cursor: pointer;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.modooscuro.activo {
+    background: #eee; /* Lighter background when active */
+    color: #333; /* Darker text when active */
+}
+
+
+/* Dark mode styles - apply when body has the 'dark-mode' class */
+body.dark-mode {
+    background-color: #282828; /* Dark background */
+    color: #e0e0e0; /* Light text */
+}
+
+body.dark-mode h1 {
+    color: #ffffff; /* White text remains in dark mode for title */
+    background-color: #4a3c8c; /* A slightly darker purple for dark mode title background */
+}
+
+body.dark-mode h2,
+body.dark-mode #contactanos {
+    color: #b0c4de; /* Light greyish-blue for h2/contactanos in dark mode */
+    background-color: #3a307a; /* Darker background for h2/contactanos */
+}
+
+body.dark-mode h3 {
+    color: #ccc; /* Lighter grey for h3 in dark mode */
+}
+
+body.dark-mode p {
+    color: #e0e0e0; /* Inherits from body, defined explicitly */
+}
+
+body.dark-mode a {
+    color: #9370db; /* A medium purple for links in dark mode */
+}
+
+body.dark-mode .destacado {
+    color: #da70d6; /* A pinkish-purple for highlighted text in dark mode */
+}
+
+body.dark-mode .prefijo,
+body.dark-mode .causas {
+    background-color: #3a3a3a; /* Dark grey background for these sections */
+    border-color: #555; /* Darker border */
+    box-shadow: 5px 8px 16px -1px rgba(255, 255, 255, 0.1); /* Softer shadow */
+    color: #e0e0e0; /* Light text for these sections */
+}
+
+body.dark-mode .divs2 {
+    border: 2px solid #555; /* Darker border in dark mode */
+    background-color: #444; /* Darker background for inner divs */
+    color: #e0e0e0; /* Light text for inner divs */
+}
+
+body.dark-mode #infopag {
+    background-color: #3a3a3a; /* Darker background for fixed info bar */
+    color: #e0e0e0; /* Light text for fixed info bar */
+    border-top: 1px solid #555;
+}
+
+body.dark-mode #infopag a {
+    color: #bbb; /* Lighter grey links in dark mode footer */
+}
+
+body.dark-mode #form1 {
+     border-color: #555; /* Darker border for the form */
+     color: #e0e0e0; /* Light text for the form */
+}
+
+body.dark-mode .textarea1 label,
+body.dark-mode .checkbox label {
+    color: #e0e0e0; /* Light color for labels in dark mode */
+}
+
+
+body.dark-mode input[type="text"],
+body.dark-mode input[type="email"],
+body.dark-mode input[type="tel"],
+body.dark-mode textarea {
+    background-color: #555; /* Darker input background */
+    color: #e0e0e0; /* Light input text */
+    border: 1px solid #777; /* Adjusted border */
+}
+
+body.dark-mode input[type="submit"] {
+    background-color: #9370db; /* Medium purple submit button */
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+body.dark-mode input[type="submit"]:hover {
+    background-color: #8a2be2; /* Slightly darker purple on hover */
+}
+
+/* Ensure placeholders are visible in dark mode */
+body.dark-mode ::placeholder {
+  color: #ccc;
+  opacity: 1;
+}
+
+body.dark-mode #output {
+    color: #bbb; /* Lighter color for the character count */
+}
